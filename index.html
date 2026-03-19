@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성악가 CEO 이영숙 (Youngsuk Lee) - 공식 홈페이지</title>
+    <!-- 구글 폰트: 클래식 명조(Playfair Display) + 모던 고딕(Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --classic-dark: #0f1423; /* 깊은 네이비 */
+            --classic-gold: #c5a880; /* 클래식 골드 */
+            --tech-blue: #00e5ff; /* AI/IT 네온 블루 */
+            --tech-cyan: #1de9b6;
+            --bg-color: #fcfcfc;
+            --text-dark: #222;
+            --text-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--classic-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo-text {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* 공통 스타일 */
+        .section {
+            padding: 100px 5vw;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--classic-gold);
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--classic-gold), var(--tech-blue));
+            margin: 20px auto 40px;
+        }
+
+        /* 네비게이션 */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 20, 35, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--classic-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(197, 168, 128, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 15px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--tech-blue);
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding: 0 5vw;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('KakaoTalk_20260306_141513903.jpg') center/cover no-repeat;
+            opacity: 0.4;
+            z-index: 0;
+            filter: grayscale(30%) sepia(20%);
+        }
+
+        .hero::after { /* 테크 느낌의 패턴 오버레이 */
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, rgba(15, 20, 35, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: slideUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid var(--classic-gold);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--classic-gold);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-tech {
+            color: var(--tech-cyan);
+            text-shadow: 0 0 10px rgba(29, 233, 182, 0.4);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 35px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-gold {
+            border: 1px solid var(--classic-gold);
+            background: rgba(197, 168, 128, 0.1);
+        }
+        .btn-gold:hover {
+            background: var(--classic-gold);
+            color: var(--classic-dark);
+            box-shadow: 0 0 20px rgba(197, 168, 128, 0.5);
+        }
+
+        .btn-tech {
+            border: 1px solid var(--tech-blue);
+            background: rgba(0, 229, 255, 0.05);
+            color: var(--tech-blue);
+        }
+        .btn-tech:hover {
+            background: var(--tech-blue);
+            color: var(--classic-dark);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+        }
+
+        /* 프로필 섹션 */
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .profile-image {
+            flex: 0 0 40%;
+            position: relative;
+        }
+
+        .profile-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 20px 20px 0 rgba(197, 168, 128, 0.1), -1px -1px 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-text h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .profile-title-sub {
+            color: var(--classic-gold);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .history-list {
+            margin-bottom: 30px;
+        }
+
+        .history-list h4 {
+            color: var(--tech-cyan);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+        }
+
+        .history-list ul {
+            list-style: none;
+        }
+
+        .history-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .history-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--classic-gold);
+        }
+
+        /* 서비스 및 회사 정보 (JW Company & UPRA) */
+        .company-section {
+            background: linear-gradient(135deg, rgba(15, 20, 35, 1) 0%, rgba(20, 30, 48, 1) 100%);
+            border-top: 1px solid rgba(0, 229, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--tech-blue), var(--classic-gold));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 229, 255, 0.3);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+        }
+
+        .service-card .badge {
+            display: inline-block;
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--tech-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #bbb;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            min-height: 80px;
+        }
+
+        /* 미디어 채널 섹션 */
+        .media-channels {
+            padding-bottom: 100px;
+        }
+        
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .channel-box {
+            background: #151a28;
+            border: 1px solid #1f273b;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .channel-icon {
+            font-size: 40px;
+            color: #ff0000; /* YouTube Red */
+            margin-bottom: 20px;
+        }
+
+        .channel-box h4 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .channel-box p {
+            color: var(--classic-gold);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        /* 갤러리 섹션 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: brightness(0.8);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #0a0d17;
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* 애니메이션 */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 반응형 */
+        @media (max-width: 992px) {
+            .profile { flex-direction: column; }
+            .profile-image { margin-bottom: 40px; }
+            .hero h1 { font-size: 3.5rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.8rem; }
+            .section { padding: 60px 5vw; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-text">Soprano CEO Youngsuk Lee</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#business">Business & IT</a>
+            <a href="#media">Media</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Soprano & CEO</span>
+            <h1>성악가 CEO <span class="highlight-tech">이영숙</span></h1>
+            <p>예술가의 감성과 CEO의 혁신으로 세상에 없던 새로운 가치를 창출합니다.</p>
+            <div class="btn-group">
+                <a href="#business" class="btn btn-tech">UPRA 플랫폼 알아보기</a>
+                <a href="#profile" class="btn btn-gold">대표이사 프로필</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="section">
+        <h2 class="section-title">Profile</h2>
+        <div class="profile">
+            <div class="profile-image">
+                <img src="file-11.jpg" alt="소프라노 이영숙 프로필">
+            </div>
+            <div class="profile-text">
+                <h3>이영숙 (Youngsuk Lee)</h3>
+                <span class="profile-title-sub">소프라노 성악가 / (주)자원 대표이사 / 아티스트</span>
+                
+                <div class="history-list">
+                    <h4>Education</h4>
+                    <ul>
+                        <li>상명대학교 성악과 졸업</li>
+                        <li>이탈리아 로마 산타 체칠리아 국립음악원 수학</li>
+                        <li>이탈리아 페스카라 벨칸토 아카데미 졸업</li>
+                        <li>한세대학교 성악 박사(DMA)</li>
+                        <li>이탈리아 Gaspare Spontini 국립음악원 예술경영 박사(DMA)</li>
+                    </ul>
+                </div>
+
+                <div class="history-list">
+                    <h4>Experience & Performance</h4>
+                    <ul>
+                        <li>이탈리아 그룹 뉴트롤즈 내한공연 특별 게스트</li>
+                        <li>2018 평창 동계올림픽 초청 공연</li>
+                        <li>광주 세계수영선수권대회 및 국회의사당 제헌절 기념행사 초청 공연</li>
+                        <li>이탈리아, 오스트리아, 독일 등 세계 각국 및 해외 초청 연주</li>
+                    </ul>
+                </div>
+
+                <div class="history-list">
+                    <h4>Repertoire (Opera & Oratorio)</h4>
+                    <ul>
+                        <li><strong>오페라 (주역):</strong> 〈카르멘〉, 〈라 보엠〉, 〈코지 판 투테〉, 〈마술피리〉, 〈피가로의 결혼〉, 〈오르페오와 에우리디체〉 등</li>
+                        <li><strong>창작오페라:</strong> 〈결혼〉, 〈구레네 시몬〉, 〈미호뎐〉, 〈여우뎐〉, 〈봄봄〉, 〈천생연분〉</li>
+                        <li><strong>오라토리오 (솔리스트):</strong> 헨델 〈메시아〉, 모차르트 〈대관식 미사〉, 구노 장엄미사, 베르디 레퀴엠, 포레 레퀴엠 등</li>
+                    </ul>
+                </div>
+
+                <div class="history-list">
+                    <h4>Awards & Broadcast</h4>
+                    <ul>
+                        <li>대한민국 오페라상 (월전문화재단상), 세종문화대상, 러시아 하바로브스크 연주자 최고상</li>
+                        <li>수원문화상, 경기음악인상, 수원음악인상, 수원 예술인상</li>
+                        <li>EBS FM 및 OBS 클래식 음악 프로그램 진행</li>
+                    </ul>
+                </div>
+
+                <div class="history-list" style="margin-bottom: 0;">
+                    <h4>Academic & Current Positions</h4>
+                    <ul>
+                        <li>상명대학교 성악과 전임교수 역임</li>
+                        <li><strong>현) UPRA 대표 아티스트 및 주식회사 자원(JW Company) 대표이사</strong></li>
+                        <li>성정문화재단 국제부 이사, 수원음악협회 부회장, 한국·중국 가곡연구회 이사</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="section company-section">
+        <h2 class="section-title">Business & Innovation</h2>
+        <p style="text-align: center; color: #ccc; max-width: 800px; margin: 0 auto;">
+            주식회사 자원(JW Company)은 예술과 IT 기술을 결합하여 세상에 없던 프라이빗 언택트 라이브 공연 플랫폼을 제공합니다.
+        </p>
+
+        <div class="service-grid">
+            <div class="service-card" style="grid-column: 1 / -1; max-width: 650px; margin: 0 auto; width: 100%;">
+                <span class="badge">Main Platform</span>
+                <h3>UPRA (유프라)</h3>
+                <p>프라이빗 언택트 라이브 공연 플랫폼입니다. 아티스트가 개인별 맞춤 메시지를 음악으로 전달하는 혁신적이고 감동적인 서비스를 경험해보세요.</p>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="http://www.upra.co.kr" target="_blank" class="btn btn-tech" style="padding: 10px 25px; font-size: 0.9rem;">UPRA 방문하기</a>
+                    <a href="http://www.jawonupra.com" target="_blank" class="btn btn-gold" style="padding: 10px 25px; font-size: 0.9rem;">(주)자원 홈페이지</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="section media-channels">
+        <h2 class="section-title">Official Media Channels</h2>
+        <div class="channel-grid">
+            <a href="https://www.youtube.com/@leeyoungsuk88" target="_blank" class="channel-box" style="text-decoration: none; display: block; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                <div class="channel-icon">▶</div>
+                <h4>소프라노 이영숙 TV</h4>
+                <p><strong>'발성 끝판퀸'</strong></p>
+                <p style="color: #888; font-size: 0.85rem;">30년 경력의 발성 노하우 대공개</p>
+            </a>
+            <a href="https://www.youtube.com/@UPRA_4064" target="_blank" class="channel-box" style="text-decoration: none; display: block; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                <div class="channel-icon">▶</div>
+                <h4>UPRA TV</h4>
+                <p><strong>'이영숙의 AI 경제 오페라'</strong></p>
+                <p style="color: #888; font-size: 0.85rem;">AI 기술과 경제 트렌드를 예술적 시각으로 조명</p>
+            </a>
+        </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <h3 style="color: var(--classic-gold); margin-bottom: 25px; font-family: 'Playfair Display', serif; font-size: 1.8rem;">UPRA & (주)자원 Official</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px;">
+                <a href="https://upra.co.kr" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">🌐 UPRA Web</a>
+                <a href="http://jawonupra.com" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">🏢 JW Web</a>
+                <a href="https://www.instagram.com/upra.official/" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">📸 UPRA Insta</a>
+                <a href="https://www.facebook.com/upra.official" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">📘 UPRA FB</a>
+                <a href="https://www.tiktok.com/@upra.jawon?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">🎵 UPRA TikTok</a>
+                <a href="https://m.blog.naver.com/sopranoyslee" target="_blank" rel="noopener noreferrer" class="btn btn-tech" style="padding: 10px 20px; font-size: 0.9rem;">📝 Naver Blog</a>
+            </div>
+
+            <h3 style="color: var(--classic-gold); margin-bottom: 25px; font-family: 'Playfair Display', serif; font-size: 1.8rem;">성악가 이영숙 SNS</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <a href="https://www.facebook.com/youngsuk.lee.94849410" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">📘 Facebook</a>
+                <a href="https://www.tiktok.com/@jawon_8888?_t=8ixZnS9CzNB&_r=1" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.9rem;">🎵 TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="KakaoTalk_20260306_141513903.jpg" alt="활동 사진">
+            </div>
+            <div class="gallery-item">
+                <img src="file-11.jpg" alt="프로필">
+            </div>
+            <div class="gallery-item">
+                <img src="KakaoTalk_20260317_161104865.png" alt="최근 활동 사진">
+            </div>
+            <div class="gallery-item">
+                <img src="Gemini_Generated_Image_22szsw22szsw22sz.png" alt="추가 아트워크">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Soprano & CEO Youngsuk Lee. JW Company. All Rights Reserved.</p>
+        <div style="margin-top: 15px;">
+            <a href="http://www.jawonupra.com" style="color:#666; text-decoration:none; margin: 0 10px; font-size: 0.85rem;">jawonupra.com</a>|
+            <a href="http://www.upra.co.kr" style="color:#666; text-decoration:none; margin: 0 10px; font-size: 0.85rem;">upra.co.kr</a>
+        </div>
+    </footer>
+
+    <script>
+        // 부드러운 스크롤 이동
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // 네비게이션 배경 스크롤 효과
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(15, 20, 35, 0.95)';
+                nav.style.borderBottom = '1px solid rgba(0, 229, 255, 0.2)';
+            } else {
+                nav.style.background = 'rgba(15, 20, 35, 0.85)';
+                nav.style.borderBottom = '1px solid rgba(197, 168, 128, 0.2)';
+            }
+        });
+    </script>
+</body>
+</html>
