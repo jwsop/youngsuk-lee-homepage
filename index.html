@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성악가 CEO 이영숙 (Youngsuk Lee) - 공식 홈페이지</title>
+    
+    <!-- 카카오톡 등 링크 공유 시 미리보기(썸네일) 설정 -->
+    <meta property="og:title" content="성악가 CEO 이영숙 (Youngsuk Lee) - 공식 홈페이지">
+    <meta property="og:description" content="예술가의 감성과 CEO의 혁신으로 세상에 없던 새로운 가치를 창출합니다.">
+    <!-- 프로필 사진을 대표 썸네일로 지정 (URL은 실제 사용자 깃허브 주소 기준) -->
+    <meta property="og:image" content="https://jwsop.github.io/file-11.jpg">
+    <meta property="og:url" content="https://jwsop.github.io/">
+    <meta property="og:type" content="website">
     <!-- 구글 폰트: 클래식 명조(Playfair Display) + 모던 고딕(Noto Sans KR) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
@@ -441,10 +449,28 @@
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 2.8rem; }
-            .section { padding: 60px 5vw; }
-            .btn-group { flex-direction: column; }
-            .btn { width: 100%; }
+            .logo-text { font-size: 18px; }
+            .hero h1 { font-size: 2.3rem; }
+            .hero p { font-size: 1rem; margin-bottom: 30px; }
+            .hero-badge { font-size: 0.8rem; padding: 6px 15px; }
+            .section { padding: 60px 4vw; }
+            .section-title { font-size: 2rem; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn { width: 100%; padding: 12px 20px; box-sizing: border-box; }
+            
+            .service-card { padding: 25px 15px; }
+            .service-card h3 { font-size: 1.5rem; }
+            
+            .channel-box { padding: 20px 15px; }
+            
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item img { height: 250px; }
+        }
+        @media (max-width: 480px) {
+            .media-channels .btn, .company-section .btn { 
+                width: 100%; 
+                margin-bottom: 5px; 
+            }
         }
     </style>
 </head>
@@ -519,6 +545,15 @@
                         <li>대한민국 오페라상 (월전문화재단상), 세종문화대상, 러시아 하바로브스크 연주자 최고상</li>
                         <li>수원문화상, 경기음악인상, 수원음악인상, 수원 예술인상</li>
                         <li>EBS FM 및 OBS 클래식 음악 프로그램 진행</li>
+                    </ul>
+                </div>
+
+                <div class="history-list">
+                    <h4>Social Contribution & Public Relations</h4>
+                    <ul>
+                        <li>경기도 홍보대사 역임</li>
+                        <li>경기의료원 홍보대사 역임</li>
+                        <li>KT 위즈 (kt wiz) 프로야구단 홍보대사 역임</li>
                     </ul>
                 </div>
 
@@ -604,6 +639,20 @@
             <div class="gallery-item">
                 <img src="Gemini_Generated_Image_22szsw22szsw22sz.png" alt="추가 아트워크">
             </div>
+            <!-- 새로 추가된 사진들 -->
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_01.jpg" alt="갤러리 사진 1"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_02.jpg" alt="갤러리 사진 2"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_03.jpg" alt="갤러리 사진 3"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_04.jpg" alt="갤러리 사진 4"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_06.jpg" alt="갤러리 사진 6"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_07.jpg" alt="갤러리 사진 7"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_13.jpg" alt="갤러리 사진 13"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_15.jpg" alt="갤러리 사진 15"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_20.jpg" alt="갤러리 사진 20"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_26.jpg" alt="갤러리 사진 26"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_27.jpg" alt="갤러리 사진 27"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_28.jpg" alt="갤러리 사진 28"></div>
+            <div class="gallery-item"><img src="KakaoTalk_20260319_152409464_29.jpg" alt="갤러리 사진 29"></div>
         </div>
     </section>
 
